@@ -3,6 +3,8 @@ package misson1;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+// 반복문 연습 1 - 별찍기 10
+
 public class MakeStar10 {
     static char[][] arr;
 
