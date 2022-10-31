@@ -1,4 +1,4 @@
-package misson1;
+package misson1.m2;
 
 // 과제 1 - 구구단
 
