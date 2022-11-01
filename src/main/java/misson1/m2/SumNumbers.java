@@ -3,6 +3,7 @@ package misson1.m2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 // 반복문 연습 2 - 숫자의 합
 

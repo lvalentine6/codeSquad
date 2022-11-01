@@ -17,10 +17,10 @@ public class AlarmClock {
         int minute = Integer.parseInt(st.nextToken());
         int time = 0;
 
-        if(minute < 45) {
+        if (minute < 45) {
             hour--;
             minute = 60 - (45 - minute);
-            if(hour < 0) {
+            if (hour < 0) {
                 hour = 23;
             }
             sb.append(hour).append(" ").append(minute);
