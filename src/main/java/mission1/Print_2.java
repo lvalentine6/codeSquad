@@ -1,4 +1,4 @@
-package misson1;
+package mission1;
 
 // 조건문 연습 1 - 출력 2
 

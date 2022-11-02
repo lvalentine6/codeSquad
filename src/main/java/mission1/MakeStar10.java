@@ -1,4 +1,4 @@
-package misson1;
+package mission1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

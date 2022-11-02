@@ -1,4 +1,4 @@
-package misson1.m1;
+package mission1.m1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

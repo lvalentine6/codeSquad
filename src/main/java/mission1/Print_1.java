@@ -1,4 +1,4 @@
-package misson1;
+package mission1;
 
 // 출력 1
 
