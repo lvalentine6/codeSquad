@@ -12,7 +12,7 @@ public class OX_5 {
 
         for (int i = 0; i < n; i++) {
             int answer = cul(br.readLine());
-            if(i != n) {
+            if (i != n) {
                 sb.append(answer).append("\n");
                 continue;
             }
@@ -26,7 +26,7 @@ public class OX_5 {
         int cnt = 0;
         String[] arr = str.split("");
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i].equals("O")) {
+            if (arr[i].equals("O")) {
                 sum += ++cnt;
                 continue;
             }
