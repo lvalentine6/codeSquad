@@ -1,4 +1,4 @@
-package mission2OOP;
+package mission2;
 
 public class Problem1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package mission2OOP;
+package mission2;
 
 // Human class 재사용 해보자
 // 왜 #객체간의 협력 키워드가 들어있지?
