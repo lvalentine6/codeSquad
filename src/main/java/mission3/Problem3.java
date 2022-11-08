@@ -61,7 +61,6 @@ public class Problem3 {
     }
 
     static void dfs(int[][] arr, boolean[][] visited, int[] xy) {
-
         if(visited[7][7]) {
             return;
         }
