@@ -1,6 +1,6 @@
 package mission6.problem1;
 
-public class AdvancedLevel extends PlayerLevel{
+public class AdvancedLevel extends PlayerLevel {
 
     @Override
     void jump() {
