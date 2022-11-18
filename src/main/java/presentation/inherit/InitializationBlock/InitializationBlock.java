@@ -1,4 +1,4 @@
-package presentation.Interface.InitializationBlock;
+package presentation.inherit.InitializationBlock;
 
 public class InitializationBlock {
     String name;
