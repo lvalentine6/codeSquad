@@ -22,15 +22,15 @@ public class Scale_4 {
             list.add(Integer.parseInt(st.nextToken()));
         }
 
-        if(checkAsc(list)) {
+        if (checkAsc(list)) {
             answer = "ascending";
         }
 
-        if(checkDesc(list)) {
+        if (checkDesc(list)) {
             answer = "descending";
         }
 
-        if(!checkAsc(list) && !checkDesc(list)) {
+        if (!checkAsc(list) && !checkDesc(list)) {
             answer = "mixed";
         }
 
@@ -39,7 +39,7 @@ public class Scale_4 {
 
     static boolean checkAsc(List<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
-            if(list.get(i) != i + 1) {
+            if (list.get(i) != i + 1) {
                 return false;
             }
         }

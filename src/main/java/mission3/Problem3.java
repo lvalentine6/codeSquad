@@ -61,7 +61,7 @@ public class Problem3 {
     }
 
     static void dfs(int[][] arr, boolean[][] visited, int[] xy) {
-        if(visited[7][7]) {
+        if (visited[7][7]) {
             return;
         }
 
@@ -79,7 +79,7 @@ public class Problem3 {
 
             if (!visited[nextY][nextX] && arr[nextY][nextX] == 0) {
                 visited[nextY][nextX] = true;
-                if(nextY == 7 && nextX == 7) {
+                if (nextY == 7 && nextX == 7) {
                     dfsBuilder.append("[" + nextY + ", ");
                     dfsBuilder.append(nextX + "]");
                     dfsBuilder.append(" -> ");

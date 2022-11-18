@@ -13,7 +13,7 @@ public class Game {
             String fruit = gameManager.getFruit(cnt);
             gameManager.playResult(fruit, diceNumber);
 
-            if(gamer.getMoney() > memento.getMoney()) {
+            if (gamer.getMoney() > memento.getMoney()) {
                 System.out.println("복사 저장");
                 memento = gamer.createMemento();
             } else if (gamer.getMoney() < memento.getMoney() / 2) {

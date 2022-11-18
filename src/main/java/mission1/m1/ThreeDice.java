@@ -3,7 +3,13 @@ package mission1.m1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
 
 // 조건문 연습 7 - 주사위 세개
 
@@ -23,7 +29,7 @@ public class ThreeDice {
         List<Integer> list = new ArrayList<>(hm.keySet());
         Collections.sort(list, (Comparator.comparingInt(hm::get)).reversed());
 
-        if(hm.get(list.get(0)) == 3) {
+        if (hm.get(list.get(0)) == 3) {
             answer = 10000 + list.get(0) * 1000;
         } else if (hm.get(list.get(0)) == 2) {
             answer = 1000 + list.get(0) * 100;

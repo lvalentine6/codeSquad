@@ -28,7 +28,7 @@ public class Problem4 {
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < score.length; i++) {
-            if(max == score[i]) {
+            if (max == score[i]) {
                 list.add(i + 1);
             }
         }
