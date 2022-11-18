@@ -1,4 +1,4 @@
-package presentation.inherit;
+package presentation.interface1;
 
 public class Car {
     // 맴버변수로 인터페이스를 가지고 있기 때문에 객체 의존성이 낮음

@@ -1,4 +1,4 @@
-package presentation.inherit;
+package presentation.interface1;
 
 public class SuperEngine implements Engine{
 
