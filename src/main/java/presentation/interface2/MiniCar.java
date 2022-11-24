@@ -1,6 +1,7 @@
 package presentation.interface2;
 
-public class SportsCar implements Car {
+public class MiniCar implements Car {
+
     @Override
     public void getCar() {
 
