@@ -11,10 +11,15 @@ public class Main {
         Car car4 = new SportsCar();
 
         // ....?
-        Roy roy = new Born();
-        // 미니카
+        Human roy = new Roy();
+
+        // Car 인터페이스를 구현한 클래스라면 매개변수 사용가능
         roy.buyCar(car3);
         roy.buyCar(car4);
+
+        // roy를 Roy 타입으로 다운캐스팅 후 Car 클래스의 인스턴스인 sportsCar를 반환
+        Car car5 = ((Roy) roy).makeCar();
+        car5.getCar();
 
     }
 }

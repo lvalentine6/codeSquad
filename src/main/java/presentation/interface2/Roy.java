@@ -1,8 +1,19 @@
 package presentation.interface2;
 
-public interface Roy {
-    void bornRoy();
+public class Roy implements Human {
 
-    // 인터페이스를 매개변수로 사용
-    void buyCar(Car car);
+    @Override
+    public void born() {
+        System.out.println("로이가 태어남");
+    }
+
+    @Override
+    public void buyCar(Car car) {
+        System.out.println("로이가 차를 샀다!");
+    }
+
+    // 리턴타입이 인터페이스 -> 해당 인터페이스를 구현한 클래스의 인스턴스를 반환한다는것
+    public Car makeCar() {
+        return new SportsCar();
+    }
 }
