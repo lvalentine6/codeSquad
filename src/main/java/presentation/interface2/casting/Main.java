@@ -34,6 +34,5 @@ public class Main {
         // 하위 타입으로 형변환 (다운캐스팅) 후 사용 가능
 //        list2.push();
 
-
     }
 }

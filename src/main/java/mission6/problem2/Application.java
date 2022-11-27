@@ -1,9 +1,5 @@
 package mission6.problem2;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 public class Application {
     public static void main(String[] args) {
         Student student1 = new Student("강감찬", 211213, "국어국문학과", "국어", new SubjectScore("국어", 95, 56));

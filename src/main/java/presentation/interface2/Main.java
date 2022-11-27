@@ -20,6 +20,5 @@ public class Main {
         // roy를 Roy 타입으로 다운캐스팅 후 Car 클래스의 인스턴스인 sportsCar를 반환
         Car car5 = ((Roy) roy).makeCar();
         car5.getCar();
-
     }
 }
