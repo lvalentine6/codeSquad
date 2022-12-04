@@ -1,6 +1,6 @@
 package presentation.interface1;
 
-public class NormalEngine implements Engine{
+public class NormalEngine implements Engine {
 
     @Override
     public void getEngine() {

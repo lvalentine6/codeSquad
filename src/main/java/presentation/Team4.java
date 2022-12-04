@@ -1,6 +1,6 @@
 package presentation;
 
-public class Team4 extends CodeSquad{
+public class Team4 extends CodeSquad {
     private String no1 = "Roy";
     private String no2 = "GoGone";
     protected String offlineMeetingPlace;

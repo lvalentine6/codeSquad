@@ -7,5 +7,6 @@ public class Main {
 
         Team4 team4_2 = new Team4("gather", "강남불백", "신촌");
         System.out.println(team4_2.onlineMeetingPlace + " " + team4_2.dinnerMenu + " " + team4_2.offlineMeetingPlace);
+
     }
 }
