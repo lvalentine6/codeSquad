@@ -5,7 +5,7 @@ public class Car {
     private Engine engine;
 
     // 인스턴스에 의존하고 있기 때문에 의존성이 높음
-    private NormalEngine normalEngine = new NormalEngine();
+//    private NormalEngine normalEngine = new NormalEngine();
 
     public Car(Engine engine) {
         this.engine = engine;

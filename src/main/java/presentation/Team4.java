@@ -11,10 +11,10 @@ public class Team4 extends CodeSquad{
     }
 
     public void print() {
-        System.out.println("Team4 no1 : " + this.no1);
+        System.out.println("Team4 no1 : " + no1);
         System.out.println("CodeSquad no1 : " + super.no1);
         System.out.println("Team4 no2 : " + this.no2);
         System.out.println("CodeSquad no2 : " + super.no2);
-        System.out.println("CodeSquad no3 : " + super.no3);
+        System.out.println("CodeSquad no3 : " + no3);
     }
 }
