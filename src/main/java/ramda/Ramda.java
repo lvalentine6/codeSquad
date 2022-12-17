@@ -1,5 +1,5 @@
 package ramda;
 
-public interface Ramda1 {
+public interface Ramda {
     int run(int a, int b);
 }
