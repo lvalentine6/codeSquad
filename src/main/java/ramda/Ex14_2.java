@@ -23,7 +23,8 @@ public class Ex14_2 {
         makeRandomNumbers(supplier, list);
         System.out.println(list);
         printEvenNumbers(list, predicate, consumer);
-
+        List<Integer> subList = makeSubList(list, function);
+        System.out.println(subList);
     }
 
     // 랜덤번호 10개를 원소로 가지는 리스트 만드는 메서드
@@ -41,9 +42,15 @@ public class Ex14_2 {
                 consumer.accept(i);
             }
         }
-        System.out.print("]");
+        System.out.println("]");
     }
 
     // 일의 자리를 없애고 새로운 리스트를 반환하는 메서드 구현
-
+    public static <T> List<T> makeSubList(List<T> list, Function<T, T> function) {
+        List<T> subList = new ArrayList<>();
+        for(T i : list) {
+            subList.add(function.apply(i));
+        }
+        return subList;
+    }
 }
