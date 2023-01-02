@@ -3,6 +3,7 @@ package algorithm2;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
+import preCourse.algorithm2.Problem4;
 
 class Problem4Test {
 
