@@ -3,6 +3,7 @@ package algorithm2;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import preCourse.algorithm2.Problem2;
 
 class Problem2Test {
 

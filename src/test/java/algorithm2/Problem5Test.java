@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.text.ParseException;
 import org.junit.jupiter.api.Test;
+import preCourse.algorithm2.Problem5;
 
 class Problem5Test {
 
