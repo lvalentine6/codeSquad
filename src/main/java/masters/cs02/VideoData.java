@@ -9,11 +9,10 @@ public class VideoData {
     private int playtime;
     private String connectionAddress;
 
-    public VideoData() {
+    public VideoData(String title, int playtime) {
         this.id = makeId();
         this.title = title;
         this.playtime = playtime;
-        this.connectionAddress = connectionAddress;
     }
 
     public String makeId() {
@@ -23,6 +22,15 @@ public class VideoData {
     }
 
     public void print() {
-        System.out.println(id);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(title)
+                .append("(")
+                .append(id)
+                .append(")")
+                .append(":")
+                .append(playtime)
+                .append("초");
+        System.out.println(stringBuilder);
     }
+
 }
