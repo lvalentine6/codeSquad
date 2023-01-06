@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.UUID;
 
 public class VideoData {
-    private String id;
-    private String title;
+    private final String id;
+    private final String title;
     private int playtime;
     private String connectionAddress;
 
@@ -13,6 +13,7 @@ public class VideoData {
         this.id = makeId();
         this.title = title;
         this.playtime = playtime;
+        this.connectionAddress = null;
     }
 
     public String makeId() {
