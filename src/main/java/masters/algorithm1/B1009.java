@@ -20,7 +20,7 @@ public class B1009 {
             int data = 1;
             for (int j = 0; j < b; j++) {
                 data = (data * a) % DIVIDE_NUMBER;
-                if(data == 0) {
+                if (data == 0) {
                     data = DIVIDE_NUMBER;
                 }
             }

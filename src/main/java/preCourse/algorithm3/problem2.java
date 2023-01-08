@@ -23,7 +23,7 @@ class problem1 {
             int nowNumber = grades.get(i);
             int nextNumber = multipleNumber(nowNumber);
             boolean flag = checkFailGrade(nextNumber);
-            if(flag) {
+            if (flag) {
                 answer.add(nowNumber);
                 continue;
             }
@@ -34,14 +34,14 @@ class problem1 {
     }
 
     public static int roundNumber(int nowNumber, int nextNumber) {
-        if(nextNumber - nowNumber < 3) {
+        if (nextNumber - nowNumber < 3) {
             return nextNumber;
         }
         return nowNumber;
     }
 
     public static boolean checkFailGrade(int nextNumber) {
-        if(nextNumber < CHECK_GRADE) {
+        if (nextNumber < CHECK_GRADE) {
             return true;
         }
         return false;
@@ -50,7 +50,7 @@ class problem1 {
     public static int multipleNumber(int n) {
         int share = n / CHECK_NUMBER;
         int rest = n % CHECK_NUMBER;
-        if(rest != 0) {
+        if (rest != 0) {
             return CHECK_NUMBER * (share + 1);
         }
         return n;

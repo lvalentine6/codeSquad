@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class Application {
     public static void main(String[] args) throws IOException {
-//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         VideoData[] videoDataArray = new VideoData[13];
         Random random = new Random();
 
@@ -14,12 +13,11 @@ public class Application {
                 videoDataArray[i] = new VideoData("제목0" + (i + 1), random.nextInt(15) + 1);
                 continue;
             }
-//            System.out.print("제목 입력 : ");
             videoDataArray[i] = new VideoData("제목" + (i + 1), random.nextInt(15) + 1);
         }
 
-        for (VideoData vi : videoDataArray) {
-            vi.print();
+        for (VideoData videoData : videoDataArray) {
+            videoData.print();
         }
     }
 }

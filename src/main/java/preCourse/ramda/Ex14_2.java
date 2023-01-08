@@ -37,7 +37,7 @@ public class Ex14_2 {
     public static <T> void printEvenNumbers(List<T> list, Predicate<T> predicate, Consumer<T> consumer) {
         System.out.print("[");
         for (T i : list) {
-            if(predicate.test(i)) {
+            if (predicate.test(i)) {
                 consumer.accept(i);
             }
         }
@@ -45,8 +45,6 @@ public class Ex14_2 {
     }
 
     // 일의 자리를 없애고 새로운 리스트를 반환하는 메서드 구현
-
-
 
 
 }

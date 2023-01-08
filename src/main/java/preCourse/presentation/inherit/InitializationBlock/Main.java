@@ -7,6 +7,5 @@ public class Main {
         InitializationBlock test3 = new InitializationBlock();
 
 
-
     }
 }

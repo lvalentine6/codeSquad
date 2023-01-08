@@ -33,5 +33,4 @@ public class VideoData {
                 .append("초");
         System.out.println(stringBuilder);
     }
-
 }
