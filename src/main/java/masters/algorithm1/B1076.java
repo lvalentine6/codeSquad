@@ -24,7 +24,7 @@ public class B1076 {
 
         Map<String, int[]> map = new HashMap<>();
         int multiple = 1;
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i <= 9; i++) {
             map.put(list.get(i), new int[]{i, multiple});
             multiple *= 10;
         }
@@ -33,10 +33,10 @@ public class B1076 {
         String first = bufferedReader.readLine();
         String second = bufferedReader.readLine();
         String third = bufferedReader.readLine();
-        int answer = 0;
+        long answer = 0;
 
         String temp = String.valueOf(map.get(first)[0]) + map.get(second)[0];
-        answer = Integer.parseInt(temp) * map.get(third)[1];
+        answer = Long.parseLong(temp) * map.get(third)[1];
         System.out.println(answer);
     }
 }
