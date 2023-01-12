@@ -19,6 +19,7 @@ CS04
     
     ![자료형 크기 리마인드](https://user-images.githubusercontent.com/77956808/212138750-bc942cc9-6f98-4c17-81aa-c569d29d64bc.png)
     * [C 언어에서 패딩 바이트](https://coding-factory.tistory.com/670)
+    
 * [ ] 포인터와 자바에서의 포인터
 * [ ] GC 개념과 동작 원리
 * [ ] JVM에 개념과 동작 원리
