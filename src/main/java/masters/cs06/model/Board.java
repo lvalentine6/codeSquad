@@ -1,5 +1,10 @@
 package masters.cs06.model;
 
+import java.util.HashMap;
+import java.util.Map;
+import masters.cs06.model.piece.ChessPiece;
+import masters.cs06.model.piece.Pawn;
+
 public class Board {
     private Object[][] chessBoard;
     public Board(Object[][] chessBoard) {
@@ -15,8 +20,10 @@ public class Board {
         return null;
     }
 
-    public void initPiece() {
-
+    public void initPiece(ChessPiece chessPiece) {
+        Pawn pawn = new Pawn('W', null);
+        Position position = new Position();
+        Map<Pawn, Position> map = new HashMap<>();
     }
 
     public void setPiece() {

@@ -4,12 +4,11 @@ import java.util.List;
 import masters.cs06.model.Position;
 
 public class Rook implements ChessPiece {
-    final int pieceCode;
-    final char color;
-    Position position;
+    private static int rookCode = 0;
+    private final char color;
+    private Position position;
 
-    public Rook(int pieceCode, char color, Position position) {
-        this.pieceCode = pieceCode;
+    public Rook(char color, Position position) {
         this.color = color;
         this.position = position;
     }

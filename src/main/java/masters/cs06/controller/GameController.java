@@ -1,6 +1,7 @@
 package masters.cs06.controller;
 
 import masters.cs06.model.Board;
+import masters.cs06.model.Position;
 import masters.cs06.model.piece.ChessPiece;
 import masters.cs06.model.User;
 import masters.cs06.view.InputView;
@@ -26,7 +27,6 @@ public class GameController {
 
     public void gameStart() {
         outputView.printStart();
-
     }
 
     public void gameProgress() {
