@@ -7,6 +7,11 @@ public class DOM {
         this.XML = XML;
     }
 
+    public String analyzeString() {
+
+        return null;
+    }
+
     @Override
     public String toString() {
         return "DOM{" +
