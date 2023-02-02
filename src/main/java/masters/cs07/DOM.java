@@ -1,5 +1,8 @@
 package masters.cs07;
 
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 public class DOM {
     String XML;
 
@@ -8,7 +11,8 @@ public class DOM {
     }
 
     public String analyzeString() {
-
+        String[] temp = XML.split("<,>");
+        System.out.println(Arrays.toString(temp));
         return null;
     }
 
