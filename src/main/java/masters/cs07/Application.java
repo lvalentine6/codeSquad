@@ -9,7 +9,7 @@ public class Application {
 
         String s = dom.analyzeString();
 
-        System.out.println(dom.toString());
+        System.out.println(dom);
 
     }
 }

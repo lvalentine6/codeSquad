@@ -12,8 +12,8 @@ public class Problem1 {
 }
 
 class BasicClass {
-    private int ten = 10;
-    private int two = 2;
+    private final int ten = 10;
+    private final int two = 2;
 
     public int getTen() {
         return ten;

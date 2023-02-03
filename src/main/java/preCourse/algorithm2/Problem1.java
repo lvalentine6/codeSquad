@@ -18,7 +18,7 @@ public class Problem1 {
         }
         Collections.sort(list);
 
-        int answer[] = list.stream().mapToInt(i -> i).toArray();
+        int[] answer = list.stream().mapToInt(i -> i).toArray();
         return answer;
     }
 }

@@ -2,8 +2,8 @@ package algorithm2;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import preCourse.algorithm2.Problem1;
 import org.junit.jupiter.api.Test;
+import preCourse.algorithm2.Problem1;
 
 public class Problem1Test {
     @Test

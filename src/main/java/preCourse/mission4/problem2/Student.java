@@ -2,12 +2,12 @@ package preCourse.mission4.problem2;
 
 public class Student implements java.io.Serializable {
 
-    private String name;
-    private int classOfNumber;
-    private String major;
-    private int koreanScore;
-    private int mathScore;
-    private int englishScore;
+    private final String name;
+    private final int classOfNumber;
+    private final String major;
+    private final int koreanScore;
+    private final int mathScore;
+    private final int englishScore;
 
     public Student(String name, Integer classOfNumber, String major, Integer koreanScore, Integer mathScore,
                    Integer englishScore) {
@@ -46,19 +46,18 @@ public class Student implements java.io.Serializable {
     }
 
     String studentInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(name)
-                .append(" 학생은 ")
-                .append(countSubject())
-                .append("과목을 수강했습니다.")
-                .append("\n")
-                .append("총점은 ")
-                .append(totalScore())
-                .append("점이고 ")
-                .append("평균은 ")
-                .append(averageScore())
-                .append("입니다.")
-                .append("\n");
-        return sb.toString();
+        String sb = name
+                + " 학생은 "
+                + countSubject()
+                + "과목을 수강했습니다."
+                + "\n"
+                + "총점은 "
+                + totalScore()
+                + "점이고 "
+                + "평균은 "
+                + averageScore()
+                + "입니다."
+                + "\n";
+        return sb;
     }
 }

@@ -6,7 +6,8 @@ import masters.cs06.model.piece.ChessPiece;
 import masters.cs06.model.piece.Pawn;
 
 public class Board {
-    private Object[][] chessBoard;
+    private final Object[][] chessBoard;
+
     public Board(Object[][] chessBoard) {
         this.chessBoard = chessBoard;
     }

@@ -20,8 +20,6 @@ public class B1052 {
             map.put(i, 1);
         }
 
-
-
         System.out.println(map);
 
     }

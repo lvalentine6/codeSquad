@@ -1,9 +1,8 @@
 package masters.cs06.controller;
 
 import masters.cs06.model.Board;
-import masters.cs06.model.Position;
-import masters.cs06.model.piece.ChessPiece;
 import masters.cs06.model.User;
+import masters.cs06.model.piece.ChessPiece;
 import masters.cs06.view.InputView;
 import masters.cs06.view.OutputView;
 
@@ -13,7 +12,7 @@ public class GameController {
     private final OutputView outputView;
     private final User user;
     private ChessPiece chessPiece;
-    private char order;
+    private final char order;
 
     public GameController(Board board, InputView inputView,
                           OutputView outputView, User user,

@@ -7,7 +7,7 @@ public class Mission2 {
         String[] str = String.valueOf(x).split("");
         String temp = "";
 
-        if(str[0].equals("-")) {
+        if (str[0].equals("-")) {
             temp += "-";
             for (int i = str.length - 1; i > 0; i--) {
                 temp += str[i];
@@ -15,7 +15,7 @@ public class Mission2 {
 
             tempLong = Long.parseLong(temp);
 
-            if(tempLong > Integer.MAX_VALUE || tempLong < Integer.MIN_VALUE) {
+            if (tempLong > Integer.MAX_VALUE || tempLong < Integer.MIN_VALUE) {
                 return 0;
             }
 
@@ -28,7 +28,7 @@ public class Mission2 {
 
         tempLong = Long.parseLong(temp);
 
-        if(tempLong > Integer.MAX_VALUE || tempLong < Integer.MIN_VALUE) {
+        if (tempLong > Integer.MAX_VALUE || tempLong < Integer.MIN_VALUE) {
             return 0;
         }
 

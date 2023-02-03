@@ -5,7 +5,7 @@ public class Main {
         // Car 타입 참조변수 참조
         Car car1 = new MiniCar();
         // 업캐스팅 1
-        Car car2 = (Car) new MiniCar();
+        Car car2 = new MiniCar();
         // 업캐스팅 2
         Car car3 = new MiniCar();
         Car car4 = new SportsCar();

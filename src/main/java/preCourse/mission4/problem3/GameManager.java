@@ -1,8 +1,8 @@
 package preCourse.mission4.problem3;
 
 public class GameManager {
-    private Originator gamer = new Originator();
-    private String[] fruits = {"사과", "샤인머스킷", "귤"};
+    private final Originator gamer = new Originator();
+    private final String[] fruits = {"사과", "샤인머스킷", "귤"};
 
     public Originator getGamer() {
         return gamer;

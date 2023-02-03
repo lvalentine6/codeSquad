@@ -21,7 +21,7 @@ public class Problem2 {
 }
 
 class Human {
-    private String name;
+    private final String name;
     private int age;
     private String male;
     private String married;

@@ -51,10 +51,10 @@ public class Generator {
             if (indexX % 2 == 0) {
                 coordinatePlane[25][i] = String.valueOf(indexX);
             } else {
-                if(i < 10) {
-                    coordinatePlane[25][i] =  "   ";
+                if (i < 10) {
+                    coordinatePlane[25][i] = "   ";
                 } else {
-                    coordinatePlane[25][i] =  "  ";
+                    coordinatePlane[25][i] = "  ";
                 }
             }
             indexX++;

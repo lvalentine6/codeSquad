@@ -12,7 +12,7 @@ public class OutputView {
     public void printCommend() {
         System.out.print(Message.COMMEND_MESSAGE.findMessage());
     }
-    
+
     public void printBoard(String[][] chessBoard) {
         StringBuilder stringBuilder = new StringBuilder();
 

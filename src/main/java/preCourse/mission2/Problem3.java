@@ -43,9 +43,9 @@ class Cafe {
 }
 
 class StarCafe extends Cafe {
-    private String cafeName = "별 다방";
-    private String menu = "아메리카노";
-    private int Price = 4000;
+    private final String cafeName = "별 다방";
+    private final String menu = "아메리카노";
+    private final int Price = 4000;
 
     public String getCafeName() {
         return cafeName;
@@ -61,9 +61,9 @@ class StarCafe extends Cafe {
 }
 
 class BeanCafe extends Cafe {
-    private String cafeName = "콩 다방";
-    private String menu = "라떼";
-    private int Price = 5000;
+    private final String cafeName = "콩 다방";
+    private final String menu = "라떼";
+    private final int Price = 5000;
 
     public String getCafeName() {
         return cafeName;

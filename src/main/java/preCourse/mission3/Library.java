@@ -3,7 +3,7 @@ package preCourse.mission3;
 import java.util.List;
 
 public class Library {
-    private List<Book> book;
+    private final List<Book> book;
 
     public Library(List<Book> book) {
         this.book = book;

@@ -3,8 +3,8 @@ package preCourse.mission4.problem3;
 import java.util.Map;
 
 public class Memento {
-    private int money;
-    private Map<String, Integer> fruits;
+    private final int money;
+    private final Map<String, Integer> fruits;
 
     public Memento(int money, Map<String, Integer> fruit) {
         this.money = money;

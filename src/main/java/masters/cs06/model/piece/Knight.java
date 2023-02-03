@@ -4,9 +4,9 @@ import java.util.List;
 import masters.cs06.model.Position;
 
 public class Knight implements ChessPiece {
-    private static int knightCode = 0;
+    private static final int knightCode = 0;
     private final char color;
-    private Position position;
+    private final Position position;
 
     public Knight(char color, Position position) {
         this.color = color;

@@ -6,8 +6,8 @@ import java.util.UUID;
 public class VideoData {
     private final String id;
     private final String title;
-    private int playtime;
-    private String connectionAddress;
+    private final int playtime;
+    private final String connectionAddress;
 
     public VideoData(String title, int playtime) {
         this.id = makeId();
@@ -23,14 +23,13 @@ public class VideoData {
     }
 
     public void print() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(title)
-                .append("(")
-                .append(id)
-                .append(")")
-                .append(":")
-                .append(playtime)
-                .append("초");
+        String stringBuilder = title
+                + "("
+                + id
+                + ")"
+                + ":"
+                + playtime
+                + "초";
         System.out.println(stringBuilder);
     }
 }

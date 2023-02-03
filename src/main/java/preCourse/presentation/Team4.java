@@ -1,8 +1,8 @@
 package preCourse.presentation;
 
 public class Team4 extends CodeSquad {
-    private String no1 = "Roy";
-    private String no2 = "GoGone";
+    private final String no1 = "Roy";
+    private final String no2 = "GoGone";
     protected String offlineMeetingPlace;
 
     public Team4(String onlineMeetingPlace, String dinnerMenu, String offlineMeetingPlace) {

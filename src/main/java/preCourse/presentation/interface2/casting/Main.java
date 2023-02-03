@@ -20,9 +20,9 @@ public class Main {
         MiniCar miniCar = new MiniCar();
 
         // 하위 타입을 상위 타입으로 변환 (생략가능)
-        Car casting1 = (Car) miniCar;
+        Car casting1 = miniCar;
         // 상위 타입을 하위 타입으로 변환 (생략불가)
-        Car casting2 = (MiniCar) casting1;
+        Car casting2 = casting1;
         // 상속관계가 아닌 클래스간 형변환 불가
 //        SportsCar casting3 = (SportsCar) miniCar;
 

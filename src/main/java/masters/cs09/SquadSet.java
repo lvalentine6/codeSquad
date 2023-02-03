@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public final class SquadSet {
-    int[] array;
+    final int[] array;
 
     public SquadSet(int[] array) {
         this.array = array;

@@ -8,7 +8,8 @@ import masters.cs05.view.OutputView;
 
 public class Application {
     public static void main(String[] args) {
-        ApplicationController applicationController = new ApplicationController(new InputView(), new OutputView(), new Generator(), new Calculator());
+        ApplicationController applicationController = new ApplicationController(new InputView(), new OutputView(),
+                new Generator(), new Calculator());
         applicationController.progress();
     }
 }

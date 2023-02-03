@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HyundaiFactory {
-    private List<Car> carList = new ArrayList<>();
+    private final List<Car> carList = new ArrayList<>();
 
     public static HyundaiFactory getFactory() {
         return new HyundaiFactory();

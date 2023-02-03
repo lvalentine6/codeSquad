@@ -41,10 +41,7 @@ class problem1 {
     }
 
     public static boolean checkFailGrade(int nextNumber) {
-        if (nextNumber < CHECK_GRADE) {
-            return true;
-        }
-        return false;
+        return nextNumber < CHECK_GRADE;
     }
 
     public static int multipleNumber(int n) {

@@ -1,7 +1,6 @@
 package masters.cs07;
 
 import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class DOM {
     String XML;

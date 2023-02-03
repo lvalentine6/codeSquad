@@ -4,9 +4,9 @@ import java.util.List;
 import masters.cs06.model.Position;
 
 public class Queen implements ChessPiece {
-    private static int queenCode = 0;
+    private static final int queenCode = 0;
     private final char color;
-    private Position position;
+    private final Position position;
 
     public Queen(char color, Position position) {
         this.color = color;

@@ -13,9 +13,9 @@ public class MyDateTest {
 }
 
 class MyDate {
-    private int day;
-    private int month;
-    private int year;
+    private final int day;
+    private final int month;
+    private final int year;
 
     public MyDate(int day, int month, int year) {
         this.day = day;
@@ -44,10 +44,7 @@ class MyDate {
     }
 
     boolean isLeapYear(int year) {
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 4 == 0 && year % 400 == 0)) {
-            return true;
-        }
-        return false;
+        return (year % 4 == 0) && (year % 100 != 0) || (year % 4 == 0 && year % 400 == 0);
     }
 }
 
