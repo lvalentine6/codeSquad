@@ -12,7 +12,7 @@ public class Application {
 
         kernel.generateProcesses();
         kernel.chooseProcess();
-        outputView.printProgressInit(processes);
+        outputView.printProgress(processes);
 //        outputView.printProgress(processes);
 
     }

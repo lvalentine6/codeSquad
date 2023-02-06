@@ -45,24 +45,38 @@ public class Process {
         using = true;
     }
 
-    public char getName() {
-        return name;
-    }
-
-    public int getOperatingTime() {
-        return operatingTime;
-    }
-
-    public int getMaxOperatingTime() {
-        return maxOperatingTime;
-    }
-
-    public int getWaitingTime() {
-        return waitingTime;
-    }
-
-    public String getStatus() {
-        return status;
+    public String returnProcessString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (isUsing()) {
+            if (operatingTime == 0) {
+                stringBuilder.append(name)
+                        .append("(")
+                        .append(status)
+                        .append(")")
+                        .append(", ")
+                        .append(operatingTime)
+                        .append(" / ")
+                        .append(maxOperatingTime)
+                        .append(" sec")
+                        .append("\n");
+                return stringBuilder.toString();
+            }
+            stringBuilder.append(name)
+                    .append("(")
+                    .append(status)
+                    .append(")")
+                    .append(", ")
+                    .append(operatingTime)
+                    .append(" / ")
+                    .append(maxOperatingTime)
+                    .append(" sec")
+                    .append(" , ")
+                    .append("waiting ")
+                    .append(waitingTime)
+                    .append(" sec")
+                    .append("\n");
+        }
+        return stringBuilder.toString();
     }
 
     @Override
