@@ -6,6 +6,7 @@ public class Process {
     private final int maxOperatingTime;
     private int waitingTime;
     private String status;
+    private boolean using;
 
     public Process(char name, int operatingTime, int maxOperatingTime, int waitingTime, String status) {
         this.name = name;
@@ -13,6 +14,7 @@ public class Process {
         this.maxOperatingTime = maxOperatingTime;
         this.waitingTime = waitingTime;
         this.status = status;
+        this.using = false;
     }
 
     public void changeStatusReady() {
@@ -31,6 +33,18 @@ public class Process {
         status = "terminated";
     }
 
+    public boolean isUsing() {
+        return using;
+    }
+
+    public void changeUsing() {
+        if(using) {
+            using = false;
+            return;
+        }
+        using = true;
+    }
+
     @Override
     public String toString() {
         return "Process{" +
@@ -39,6 +53,7 @@ public class Process {
                 ", maxOperatingTime=" + maxOperatingTime +
                 ", waitingTime=" + waitingTime +
                 ", status='" + status + '\'' +
+                ", using=" + using +
                 '}';
     }
 }

@@ -5,9 +5,18 @@ import java.util.Queue;
 import java.util.Random;
 
 public class Kernel {
-    private PCB[] pcb;
+    private final PCB[] pcb;
+    private final Process[] processes;
+    private final Queue<Process> readyQueue;
+    public static final int PROCESS_SIZE = 6;
 
-    public void generateProcesses(Process[] processes) {
+    public Kernel() {
+        this.pcb = new PCB[PROCESS_SIZE];
+        this.processes = new Process[PROCESS_SIZE];
+        this.readyQueue = new LinkedList<>();
+    }
+
+    public void generateProcesses() {
         char nameIndex = 'A';
         int maxOperatingTime = 0;
 
@@ -16,13 +25,23 @@ public class Kernel {
         }
     }
 
-    public void chooseProcess(Process[] processes, Queue<Process> readyQueue) {
+    public void chooseProcess() {
         Random random = new Random();
-
-        for (int i = 0; i < 3; i++) {
-            int index = random.nextInt(6) + 1;
-            processes[index].changeStatusReady();
-            readyQueue.add(processes[index]);
+        int choose = 0;
+        while (choose < 3) {
+            int index = random.nextInt(5);
+            if (!processes[index].isUsing()) {
+                processes[index].changeStatusReady();
+                readyQueue.add(processes[index]);
+                processes[index].changeUsing();
+                choose++;
+            }
         }
+
+        for (Process p : processes) {
+            System.out.println(p.toString());
+        }
+
+        System.out.println(readyQueue);
     }
 }
