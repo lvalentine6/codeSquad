@@ -8,12 +8,17 @@ public class Kernel {
     private final PCB[] pcb;
     private final Process[] processes;
     private final Queue<Process> readyQueue;
-    public static final int PROCESS_SIZE = 6;
+    private final int runtime;
+    private final int averageWaitingTime;
+    private final int averageReturnTime;
 
-    public Kernel() {
-        this.pcb = new PCB[PROCESS_SIZE];
-        this.processes = new Process[PROCESS_SIZE];
+    public Kernel(PCB[] pcb, Process[] process) {
+        this.pcb = pcb;
+        this.processes = process;
         this.readyQueue = new LinkedList<>();
+        this.runtime = 0;
+        this.averageWaitingTime = 0;
+        this.averageReturnTime = 0;
     }
 
     public void generateProcesses() {
@@ -27,21 +32,25 @@ public class Kernel {
 
     public void chooseProcess() {
         Random random = new Random();
-        int choose = 0;
-        while (choose < 3) {
+        int processesSize = 0;
+        while (processesSize < 3) {
             int index = random.nextInt(5);
             if (!processes[index].isUsing()) {
                 processes[index].changeStatusReady();
                 readyQueue.add(processes[index]);
                 processes[index].changeUsing();
-                choose++;
+                processesSize++;
             }
         }
 
-        for (Process p : processes) {
-            System.out.println(p.toString());
-        }
+//        for (Process p : processes) {
+//            System.out.println(p.toString());
+//        }
+//
+//        System.out.println(readyQueue);
+    }
 
-        System.out.println(readyQueue);
+    public void runProcesses() {
+
     }
 }

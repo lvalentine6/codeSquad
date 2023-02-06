@@ -2,9 +2,9 @@ package masters.cs10;
 
 public class Process {
     private final char name;
-    private int operatingTime;
+    private final int operatingTime;
     private final int maxOperatingTime;
-    private int waitingTime;
+    private final int waitingTime;
     private String status;
     private boolean using;
 
@@ -38,11 +38,31 @@ public class Process {
     }
 
     public void changeUsing() {
-        if(using) {
+        if (using) {
             using = false;
             return;
         }
         using = true;
+    }
+
+    public char getName() {
+        return name;
+    }
+
+    public int getOperatingTime() {
+        return operatingTime;
+    }
+
+    public int getMaxOperatingTime() {
+        return maxOperatingTime;
+    }
+
+    public int getWaitingTime() {
+        return waitingTime;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     @Override

@@ -1,14 +1,19 @@
 package masters.cs10;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Application {
+    public static final int PROCESS_SIZE = 6;
+
     public static void main(String[] args) {
-        Kernel kernel = new Kernel();
+        PCB[] pcb = new PCB[PROCESS_SIZE];
+        Process[] processes = new Process[PROCESS_SIZE];
+
+        Kernel kernel = new Kernel(pcb, processes);
+        OutputView outputView = new OutputView();
 
         kernel.generateProcesses();
         kernel.chooseProcess();
+        outputView.printProgressInit(processes);
+//        outputView.printProgress(processes);
 
     }
 }
