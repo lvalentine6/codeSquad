@@ -15,6 +15,22 @@ public class Process {
         this.status = status;
     }
 
+    public void changeStatusReady() {
+        status = "ready";
+    }
+
+    public void changeStatusRunning() {
+        status = "running";
+    }
+
+    public void changeStatusWaiting() {
+        status = "waiting";
+    }
+
+    public void changeStatusTerminated() {
+        status = "terminated";
+    }
+
     @Override
     public String toString() {
         return "Process{" +

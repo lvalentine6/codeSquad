@@ -1,26 +1,21 @@
 package masters.cs10;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Application {
     public static void main(String[] args) {
-        String[] status = {"new", "ready", "running", "waiting", "terminated"};
+        Kernel kernel = new Kernel();
         Process[] processes = new Process[6];
+        Queue<Process> readyQueue = new LinkedList<>();
 
-        generateProcesses(status, processes);
+        kernel.generateProcesses(processes);
+        kernel.chooseProcess(processes, readyQueue);
 
         for (Process p : processes) {
             System.out.println(p.toString());
         }
-    }
 
-    static void generateProcesses(String[] status, Process[] processes) {
-        char nameIndex = 'A';
-        int maxOperatingTime = 0;
-
-        for (int i = 0; i < 6; i++) {
-            processes[i] = new Process(nameIndex++, 0, maxOperatingTime += 3, 0, status[0]);
-        }
+        System.out.println(readyQueue);
     }
 }
