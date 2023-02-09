@@ -2,9 +2,9 @@ package masters.cs10;
 
 public class Process {
     private final char name;
-    private final int operatingTime;
+    private int operatingTime;
     private final int maxOperatingTime;
-    private final int waitingTime;
+    private int waitingTime;
     private String status;
     private boolean using;
 
@@ -45,22 +45,21 @@ public class Process {
         using = true;
     }
 
-    public String returnProcessString() {
+    public void plusOperatingTime() {
+        ++operatingTime;
+    }
+
+    public void plusWaitingTime() {
+        ++waitingTime;
+    }
+
+    public boolean isComplete() {
+        return operatingTime < maxOperatingTime;
+    }
+
+    public String returnProcessInitString() {
         StringBuilder stringBuilder = new StringBuilder();
         if (isUsing()) {
-            if (operatingTime == 0) {
-                stringBuilder.append(name)
-                        .append("(")
-                        .append(status)
-                        .append(")")
-                        .append(", ")
-                        .append(operatingTime)
-                        .append(" / ")
-                        .append(maxOperatingTime)
-                        .append(" sec")
-                        .append("\n");
-                return stringBuilder.toString();
-            }
             stringBuilder.append(name)
                     .append("(")
                     .append(status)
@@ -70,12 +69,27 @@ public class Process {
                     .append(" / ")
                     .append(maxOperatingTime)
                     .append(" sec")
-                    .append(" , ")
-                    .append("waiting ")
-                    .append(waitingTime)
-                    .append(" sec")
                     .append("\n");
         }
+        return stringBuilder.toString();
+    }
+
+    public String returnProcessString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(name)
+                .append("(")
+                .append(status)
+                .append(")")
+                .append(", ")
+                .append(operatingTime)
+                .append(" / ")
+                .append(maxOperatingTime)
+                .append(" sec")
+                .append(" , ")
+                .append("waiting ")
+                .append(waitingTime)
+                .append(" sec")
+                .append("\n");
         return stringBuilder.toString();
     }
 

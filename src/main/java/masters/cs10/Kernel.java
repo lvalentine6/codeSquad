@@ -6,15 +6,13 @@ import java.util.Queue;
 import java.util.Random;
 
 public class Kernel {
-    private final PCB[] pcb;
     private final Process[] processes;
     private final Queue<Process> readyQueue;
-    private final int runtime;
-    private final int averageWaitingTime;
-    private final int averageReturnTime;
+    private int runtime;
+    private int averageWaitingTime;
+    private int averageReturnTime;
 
-    public Kernel(PCB[] pcb, Process[] process) {
-        this.pcb = pcb;
+    public Kernel(Process[] process) {
         this.processes = process;
         this.readyQueue = new LinkedList<>();
         this.runtime = 0;
@@ -44,14 +42,33 @@ public class Kernel {
             }
         }
 
-//        for (Process p : processes) {
-//            System.out.println(p.toString());
-//        }
+        for (Process p : processes) {
+            System.out.println(p.toString());
+        }
 //
 //        System.out.println(readyQueue);
     }
 
     public void runProcesses() {
+        while (!readyQueue.isEmpty()) {
+            Process temp = readyQueue.poll();
+            temp.changeStatusRunning();
+            temp.plusOperatingTime();
 
+            for (Process p : readyQueue) {
+                p.changeStatusWaiting();
+                p.plusWaitingTime();
+            }
+
+            if (temp.isComplete()) {
+                readyQueue.add(temp);
+            }
+            runtime++;
+
+            for (Process p : readyQueue) {
+                System.out.print(p.returnProcessString());
+            }
+            System.out.println();
+        }
     }
 }
