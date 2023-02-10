@@ -27,7 +27,7 @@ object Main {
 
 public class java {
 
-    public static void test(){
+    public static void test() {
         System.out.println("java");
     }
 
@@ -48,7 +48,7 @@ object Main {
     }
 
     fun function(f: () -> Unit) {
-       f.invoke()
+        f.invoke()
     }
 
     val test: () -> Unit = { println("kotlin") }
@@ -85,16 +85,16 @@ object Main {
 
 ```java
 class CodeRunner {
-  public static void main(String[] args) {
-    int a = 3; // 자유 변수
-    InterfaceRamda interfaceRamda = i -> i + a; // 클로저
-    System.out.println(interfaceRamda.test(11));
-  }
+    public static void main(String[] args) {
+        int a = 3; // 자유 변수
+        InterfaceRamda interfaceRamda = i -> i + a; // 클로저
+        System.out.println(interfaceRamda.test(11));
+    }
 }
 
 @FunctionalInterface
 interface InterfaceRamda {
-  int test(int n);
+    int test(int n);
 }
 ```
 

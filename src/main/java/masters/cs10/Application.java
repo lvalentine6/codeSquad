@@ -4,15 +4,16 @@ public class Application {
     public static final int PROCESS_SIZE = 6;
 
     public static void main(String[] args) {
-        PCB[] pcb = new PCB[PROCESS_SIZE];
         Process[] processes = new Process[PROCESS_SIZE];
 
-        Kernel kernel = new Kernel(pcb, processes);
+        Kernel kernel = new Kernel(processes);
         OutputView outputView = new OutputView();
 
+        outputView.printStart();
         kernel.generateProcesses();
         kernel.chooseProcess();
-        outputView.printProgress(processes);
+        outputView.printInit(processes);
+        kernel.runProcesses();
 //        outputView.printProgress(processes);
 
     }
