@@ -52,5 +52,6 @@ cs13
           * HTML + CSS + JS등 수많은 자원이 함께 다운로드 되기 때문에 효율적이지 않음
           * HTTP 지속 연결 : 필요한 리소스를 전부 받기 전까지는 연결 유지
     * HTTP 메시지
-    * ![http 구조](C:\Users\USER\Desktop\http구조.png)
+    * ![http구조](https://user-images.githubusercontent.com/77956808/219685206-05e226f6-f46e-4250-a962-b042ea558a14.png)
     * 단순하며 확장 가능
+
