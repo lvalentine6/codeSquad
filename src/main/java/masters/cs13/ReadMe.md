@@ -74,6 +74,7 @@ cs13
     * HEAD : GET과 동일하지만 메시지 부분을 제외하고 상태줄만 헤더만 반환
     * OPTION : 대상 리소스에 대한 통신 가능 옵션을 설명(주로 CORS에서 사용)
   * HTTP 메서드의 속성
+    * ![http메서드속성](https://user-images.githubusercontent.com/77956808/219697396-c239cd4c-b01a-4ef0-916e-4ba9c001b075.png)
     * 안전(Safe Methods) -> 호출해도 리소스를 변경하지 않는다.
     * 멱등
     * 캐시가능
