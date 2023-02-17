@@ -95,5 +95,8 @@ cs13
       * 메시지 바디를 통한 데이터 전송
         * POST, PUT, PATCH
         * 회원 가입, 상품 주문, 리소스 변경, 등록
-      * 
+      ![폼데이터전송](https://user-images.githubusercontent.com/77956808/219703637-ad8c8f67-9309-4ca3-a0fa-82e26e765156.png)
+      
+      ![API전송](https://user-images.githubusercontent.com/77956808/219703670-8fa407fe-a8f0-4253-80a0-38ede0f73a9e.png)
+
 
