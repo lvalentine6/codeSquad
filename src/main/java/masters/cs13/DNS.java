@@ -4,7 +4,7 @@ import java.net.InetAddress;
 import java.net.URL;
 
 public class DNS {
-    private String domain;
+    private final String domain;
 
     public DNS(String domain) {
         this.domain = domain;
@@ -13,7 +13,6 @@ public class DNS {
     public String lookup() {
         StringBuilder stringBuilder = new StringBuilder();
         InetAddress[] inetAddresses = null;
-
 
         try {
             URL url = new URL(domain);

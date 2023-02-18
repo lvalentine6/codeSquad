@@ -75,22 +75,21 @@ public class Process {
     }
 
     public String returnProcessString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(name)
-                .append("(")
-                .append(status)
-                .append(")")
-                .append(", ")
-                .append(operatingTime)
-                .append(" / ")
-                .append(maxOperatingTime)
-                .append(" sec")
-                .append(" , ")
-                .append("waiting ")
-                .append(waitingTime)
-                .append(" sec")
-                .append("\n");
-        return stringBuilder.toString();
+        String stringBuilder = name
+                + "("
+                + status
+                + ")"
+                + ", "
+                + operatingTime
+                + " / "
+                + maxOperatingTime
+                + " sec"
+                + " , "
+                + "waiting "
+                + waitingTime
+                + " sec"
+                + "\n";
+        return stringBuilder;
     }
 
     @Override

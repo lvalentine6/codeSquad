@@ -21,15 +21,17 @@ public class MyServer {
             serverSocket = new ServerSocket(12345);
 
             System.out.println("[Server실행] Client연결대기중...");
-            socket = serverSocket.accept();			// 연결대기
+            socket = serverSocket.accept();            // 연결대기
 
             System.out.println("Client 연결됨.");
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
 
-            while(true) {
-                String inputMessage = in.readLine();	// 수신데이터 한줄씩 읽기
-                if ("quit".equalsIgnoreCase(inputMessage)) break;
+            while (true) {
+                String inputMessage = in.readLine();    // 수신데이터 한줄씩 읽기
+                if ("quit".equalsIgnoreCase(inputMessage)) {
+                    break;
+                }
 
                 System.out.println("From Client: " + inputMessage);
                 System.out.print("전송하기>>> ");
@@ -37,15 +39,17 @@ public class MyServer {
                 String outputMessage = scanner.nextLine();
                 out.println(outputMessage);
                 out.flush();
-                if ("quit".equalsIgnoreCase(outputMessage)) break;
+                if ("quit".equalsIgnoreCase(outputMessage)) {
+                    break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                scanner.close();		// Scanner 닫기
-                socket.close();			// Socket 닫기
-                serverSocket.close();		// ServerSocket 닫기
+                scanner.close();        // Scanner 닫기
+                socket.close();            // Socket 닫기
+                serverSocket.close();        // ServerSocket 닫기
                 System.out.println("연결종료");
             } catch (IOException e) {
                 System.out.println("소켓통신에러");

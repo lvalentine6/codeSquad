@@ -8,6 +8,5 @@ public class Application {
         String location = dns.lookup();
 
 
-
     }
 }

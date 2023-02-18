@@ -1,13 +1,10 @@
 package masters.cs11;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import preCourse.Test.Main;
 
 public class Application {
     static Queue<Integer> orderQueue = new LinkedList<>();

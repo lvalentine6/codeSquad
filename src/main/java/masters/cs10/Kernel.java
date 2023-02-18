@@ -8,8 +8,8 @@ public class Kernel {
     private final Process[] processes;
     private final Queue<Process> readyQueue;
     private int runtime;
-    private int averageWaitingTime;
-    private int averageReturnTime;
+    private final int averageWaitingTime;
+    private final int averageReturnTime;
 
     public Kernel(Process[] process) {
         this.processes = process;

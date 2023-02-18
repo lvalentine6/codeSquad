@@ -4,11 +4,10 @@ import java.util.Queue;
 
 public class OutputView {
     public void printStart() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("6개 프로세스 중 랜덤으로 3개의 프로세스를 선택합니다.")
-                .append("\n")
-                .append("라운드 로빈 방식 적용")
-                .append("\n");
+        String stringBuilder = "6개 프로세스 중 랜덤으로 3개의 프로세스를 선택합니다."
+                + "\n"
+                + "라운드 로빈 방식 적용"
+                + "\n";
         System.out.println(stringBuilder);
     }
 
@@ -21,8 +20,7 @@ public class OutputView {
     }
 
     public void printProgress(Queue<Process> readyQueue) {
-        StringBuilder stringBuilder = new StringBuilder();
 
-        System.out.println(stringBuilder);
+        System.out.println("");
     }
 }
