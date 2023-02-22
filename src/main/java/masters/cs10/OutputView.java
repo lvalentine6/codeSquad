@@ -21,6 +21,6 @@ public class OutputView {
 
     public void printProgress(Queue<Process> readyQueue) {
 
-        System.out.println("");
+        System.out.println();
     }
 }
