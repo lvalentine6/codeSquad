@@ -97,6 +97,31 @@ cs13
                 * 회원 가입, 상품 주문, 리소스 변경, 등록
                   ![폼데이터전송](https://user-images.githubusercontent.com/77956808/219703637-ad8c8f67-9309-4ca3-a0fa-82e26e765156.png)
                   ![API전송](https://user-images.githubusercontent.com/77956808/219703670-8fa407fe-a8f0-4253-80a0-38ede0f73a9e.png)
+
     * HTTP 메서드 설계 예시
-        * 
+      * HTTP API - 컬렉션
+        * POST 기반 등록
+        * 서버가 리스스 URI 결정
+      * HTTP API - 스토어
+        * PUT 기반 등록
+        * 클라이언트가 리소스 URI 결정
+      * HTML FORM 사용
+        * 순수 HTML + HTML FORM 사용
+        * GET, POST만 지원
+    * URI 설계 개념
+      * 문서(document)
+        * 단일 개념(파일 하나, 객체 인스턴스, 데이터베이스 row)
+        * 예) /members/100, /files/star.jpg
+      * 컬렉션(collection)
+        * 서버가 관리하는 리소스 디렉터리
+        * 서버가 리소스의 URI를 생성하고 관리
+        * 예) /members
+      * 스토어(store)
+        * 클라이언트가 관리하는 자원 저장소
+        * 클라이언트가 리소스의 URI를 알고 관리
+        * 예) /files
+      * 컨트롤러(controller), 컨트롤 URI
+        * 문서, 컬렉션, 스토어로 해결하기 어려운 추가 프로세스 실행
+        * 동사를 직접 사용
+        * 예) /members/{id}/delete
 
