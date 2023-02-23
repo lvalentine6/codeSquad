@@ -10,8 +10,12 @@ public class Application {
 
         PcRoomDao pcRoomDao = new PcRoomDao();
 
+        outputView.printSeat();
+        pcRoomDao.checkTable();
+
         while (!flag) {
             System.out.println(pcRoomDao.checkTable());
+            System.out.println();
             checkCommand(pcRoomDao, inputView.inputCommand());
         }
 
@@ -21,7 +25,7 @@ public class Application {
 
     public static void checkCommand(PcRoomDao pcRoomDao, String input) {
         if(input.equals("new")) {
-            pcRoomDao.creatUser();
+            pcRoomDao.updateUser();
             return;
         }
 

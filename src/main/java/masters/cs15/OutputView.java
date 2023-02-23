@@ -8,7 +8,8 @@ public class OutputView {
     }
 
     public void printSeat() {
-
+        System.out.println();
+        System.out.println("빈 자리는 다음과 같습니다.");
     }
 
     public void printFooter() {

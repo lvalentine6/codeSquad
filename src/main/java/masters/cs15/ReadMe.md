@@ -38,7 +38,7 @@ CREATE TABLE pc_table (
 
 * 테이블 구조 확인
 ```mysql
-DESC member_table;
+DESC pc_table;
 +---------------+---------+------+-----+---------+----------------+
 | Field         | Type    | Null | Key | Default | Extra          |
 +---------------+---------+------+-----+---------+----------------+
@@ -52,6 +52,17 @@ DESC member_table;
 * JDBC 드라이버 추가
   * [JDBC Platform Independent 선택](https://dev.mysql.com/downloads/connector/j/)
   * 인텔리제이 프로젝트 구조 -> 라이브러리 선택 후 모듈 적용
+
+* 기존 리눅스 명령어가 안먹는것은 AWS 리눅스로 설치되었기 때문이다. -> 왜 저렇게 설치 된거지?
+* 도커 타임존 설정
+```mysql
+ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+```
+* mysql 타임존 변경
+```mysql
+SET GLOBAL time_zone='Asia/Seoul';
+SET time_zone='Asia/Seoul';
+```
 
 * 유저 번호는 List에서 뽑아서 쿼리로 전달한다.
 * new 키워드가 입력되면 List에서 유저 한명을 랜덤으로 선택하고 update 쿼리 전송

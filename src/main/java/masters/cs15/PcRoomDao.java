@@ -23,6 +23,7 @@ public class PcRoomDao {
             System.out.println("----------------------------");
             initSeat();
             System.out.println("초기설정 완료");
+            System.out.println("----------------------------");
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
             throw new RuntimeException(sqlException);
@@ -31,9 +32,9 @@ public class PcRoomDao {
 
     public void initSeat() {
         for (int i = 0; i < 16; i++) {
-            String sql = "INSERT INTO member_table "
-                    + "(pc_start_time, pc_end_time, pc_seat)"
-                    + "VALUE(now(), NULL, seq)";
+            String sql = "INSERT INTO pc_table "
+                    + "(pc_start_time, pc_end_time, user_index)"
+                    + "VALUE(now(), NULL, 0)";
             try {
                 preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.execute();
@@ -45,7 +46,7 @@ public class PcRoomDao {
 
     public List<String> checkTable() {
         List<String> seqList = new ArrayList<>();
-        String sql = "select * from member_table";
+        String sql = "select * from pc_table";
         try {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -58,7 +59,7 @@ public class PcRoomDao {
         return seqList;
     }
 
-    public String creatUser() {
+    public String updateUser() {
         System.out.println("생성");
         return "";
     }
@@ -70,9 +71,12 @@ public class PcRoomDao {
 
     public void closeConnection() {
         try {
+            String sql = "truncate pc_table";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.execute();
             connection.close();
             System.out.println("----------------------------");
-            System.out.println("DB 접속 종료");
+            System.out.println("DB 초기화 및 접속 종료");
         } catch (SQLException sqlException) {
             throw new RuntimeException(sqlException);
         }
