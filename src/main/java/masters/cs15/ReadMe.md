@@ -49,3 +49,7 @@ DESC member_table;
 +---------------+---------+------+-----+---------+----------------+
 ```
 
+* JDBC 드라이버 추가
+  * [JDBC Platform Independent 선택](https://dev.mysql.com/downloads/connector/j/)
+  * 인텔리제이 프로젝트 구조 -> 라이브러리 선택 후 모듈 적용
+* 
