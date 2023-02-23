@@ -67,3 +67,4 @@ SET time_zone='Asia/Seoul';
 * 유저 번호는 List에서 뽑아서 쿼리로 전달한다.
 * new 키워드가 입력되면 List에서 유저 한명을 랜덤으로 선택하고 update 쿼리 전송
 * stop 키워드가 입력되면 user_index를 0으로 변경하고 종료시간을 입력하는 update 쿼리 전송 후 List에 다시 추가
+* 마지막에 rs.close, con.close 해주기
