@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PcRoomDao {
-    private Connection connection;
+    private final Connection connection;
     private static final String dbUrl = "jdbc:mysql://localhost:3306/pc_room";
     private static final String dbUser = "pc_room_manager";
     private static final String dbPassword = "1234";
