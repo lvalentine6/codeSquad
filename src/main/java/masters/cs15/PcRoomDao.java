@@ -46,7 +46,7 @@ public class PcRoomDao {
 
     public List<String> checkTable() {
         List<String> seqList = new ArrayList<>();
-        String sql = "select * from pc_table";
+        String sql = "select * from pc_table WHERE user_index = 0";
         try {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -59,14 +59,52 @@ public class PcRoomDao {
         return seqList;
     }
 
-    public String updateUser() {
-        System.out.println("생성");
-        return "";
+    public void updateUser(int userIndex) {
+        String sql = "SELECT seq FROM pc_table WHERE user_index = 0 ORDER BY RAND() LIMIT 1";
+        int seq = 0;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                seq = Integer.parseInt(resultSet.getString(1));
+            }
+
+            sql = "update pc_table SET user_index = "
+                    + userIndex
+                    + " WHERE seq = "
+                    + seq;
+
+            System.out.println(seq + "번 자리에 앉으세요 : " + "#" + userIndex);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public String deleteUser() {
-        System.out.println("삭제");
-        return "";
+    public void deleteUser(int userIndex) {
+        String sql = "SELECT seq FROM pc_table WHERE user_index = " + userIndex;
+        int seq = 0;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                seq = Integer.parseInt(resultSet.getString(1));
+            }
+
+            sql = "update pc_table SET user_index = "
+                    + 0
+                    + ", pc_end_time = now()"
+                    + " WHERE seq = "
+                    + seq;
+            System.out.println("이제 " + seq + "번 자리가 비었습니다.");
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void closeConnection() {
