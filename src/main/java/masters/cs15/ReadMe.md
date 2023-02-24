@@ -36,12 +36,14 @@ cs15
     * user_index INT NOT NULL (유저 번호)
 
 ```mysql
-CREATE TABLE pc_table ( 
-    seq INT NOT NULL AUTO_INCREMENT, 
-    pc_start_time TIME NOT NULL, 
-    pc_end_time TIME, 
-    user_index INT NOT NULL, 
-    PRIMARY KEY(seq) );
+CREATE TABLE pc_table
+(
+    seq           INT  NOT NULL AUTO_INCREMENT,
+    pc_start_time TIME NOT NULL,
+    pc_end_time   TIME,
+    user_index    INT  NOT NULL,
+    PRIMARY KEY (seq)
+);
 ```
 
 * 테이블 구조 확인
@@ -72,8 +74,8 @@ ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 * mysql 타임존 변경
 
 ```mysql
-SET GLOBAL time_zone='Asia/Seoul';
-SET time_zone='Asia/Seoul';
+SET GLOBAL time_zone = 'Asia/Seoul';
+SET time_zone = 'Asia/Seoul';
 ```
 
 * 유저 번호는 List에서 뽑아서 쿼리로 전달한다.
