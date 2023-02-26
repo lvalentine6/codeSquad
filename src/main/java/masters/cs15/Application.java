@@ -36,7 +36,7 @@ public class Application {
     public static void checkCommand(PcRoomDao pcRoomDao, String input) {
         if (input.equals("new")) {
             Random random = new Random();
-            int randomIndex = random.nextInt(16);
+            int randomIndex = random.nextInt(userList.size());
             int userIndex = userList.get(randomIndex);
             userList.remove(randomIndex);
             pcRoomDao.updateUser(userIndex);
